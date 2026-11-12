@@ -377,6 +377,18 @@ input:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
   .experience-card h3 { font-size: 16px; }
 }
 
+@media (max-aspect-ratio: 17/10) {
+  .immersive-hero {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    max-height: none;
+  }
+}
+
+.chat-launcher { visibility: hidden; pointer-events: none; }
+.chat-launcher.is-visible { visibility: visible; pointer-events: auto; }
+
 @media (prefers-reduced-motion: reduce) {
   .site-header, .destination-card img, .play-circle { transition: none; }
 }
