@@ -1,7 +1,43 @@
 (() => {
  const nav=document.getElementById('primary-nav'),toggle=document.getElementById('mobile-toggle');
  const triggers=[...document.querySelectorAll('.nav-trigger')];
- function set(b,open){b.setAttribute('aria-expanded',String(open));document.getElementById(b.getAttribute('aria-controls')).hidden=!open;}
+ const panelAnimations = new WeakMap();
+ const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+ function set(button, open) {
+   if ((button.getAttribute('aria-expanded') === 'true') === open) return;
+   const panel = document.getElementById(button.getAttribute('aria-controls'));
+   const previousAnimation = panelAnimations.get(panel);
+   const currentStyle = getComputedStyle(panel);
+   const from = panel.hidden
+     ? { opacity: 0, transform: 'translateY(-14px) scaleY(.98)' }
+     : { opacity: currentStyle.opacity, transform: currentStyle.transform };
+   previousAnimation?.cancel();
+   button.setAttribute('aria-expanded', String(open));
+   panel.inert = !open;
+   panel.classList.toggle('is-opening', open);
+
+   if (reducedMotion.matches) {
+     panel.hidden = !open;
+     panelAnimations.delete(panel);
+     return;
+   }
+
+   panel.hidden = false;
+   const to = open
+     ? { opacity: 1, transform: 'translateY(0) scaleY(1)' }
+     : { opacity: 0, transform: 'translateY(-8px) scaleY(.99)' };
+   const animation = panel.animate([from, to], {
+     duration: open ? 380 : 150,
+     easing: open ? 'cubic-bezier(.16, 1, .3, 1)' : 'cubic-bezier(.4, 0, 1, 1)',
+   });
+   panelAnimations.set(panel, animation);
+   animation.onfinish = () => {
+     if (panelAnimations.get(panel) !== animation) return;
+     panel.hidden = !open;
+     panelAnimations.delete(panel);
+   };
+ }
  function closePanels(){triggers.forEach(b=>set(b,false));}
  function closeMobile(){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open menu');document.body.style.overflow='';closePanels();}
  triggers.forEach(b=>b.addEventListener('click',()=>{const open=b.getAttribute('aria-expanded')!=='true';closePanels();set(b,open);}));
