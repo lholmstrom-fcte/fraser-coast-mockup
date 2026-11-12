@@ -1,0 +1,22 @@
+.coastal { padding: 0; scroll-margin-top: 115px; }
+.coastal-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 25px; }
+.coastal h2 { font-size: clamp(30px,3.4vw,48px); letter-spacing: -1.5px; line-height: 1.12; margin: 12px 0; }
+.coastal-heading p { max-width: 520px; font-size: 15px; line-height: 1.7; }
+.coastal-filters { display: flex; flex-wrap: wrap; gap: 9px; margin: 25px 0; }
+.coastal-filters button { font: inherit; font-size: 13px; font-weight: 600; padding: 10px 18px; border: 1px solid color-mix(in srgb,var(--ink) 25%,transparent); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; }
+.coastal-filters button[aria-pressed=true] { background: var(--ink); color: var(--paper); }
+.coastal-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 30px 24px; }
+.coastal-card[hidden] { display: none; }
+.coastal-photo { position: relative; display: block; overflow: hidden; border-radius: 12px; aspect-ratio: 1.6; }
+.coastal-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+.coastal-card:hover img { transform: scale(1.035); }
+.coastal-photo span { position: absolute; left: 14px; bottom: 14px; padding: 7px 12px; border-radius: 20px; background: #fbf9f6; color: #1c426b; font-size: 11px; font-weight: 650; }
+.coastal-card h3 { font-size: 22px; margin: 15px 0 8px; letter-spacing: -.5px; }
+.coastal-card p { font-size: 14px; line-height: 1.7; margin: 0 0 12px; }
+.coastal-card a.text-link { font-size: 12px; }
+.coastal-foot { border-top: 1px solid color-mix(in srgb,var(--ink) 20%,transparent); margin-top: 30px; padding-top: 20px; display: flex; justify-content: space-between; align-items: center; gap: 30px; }
+.coastal-foot p { font-size: 12px; line-height: 1.7; max-width: 690px; }
+.coastal-foot a { flex-shrink: 0; font-size: 13px; }
+@media(max-width:900px) { .coastal-heading { display: block; } .coastal-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .coastal-foot { display: block; } }
+@media(max-width:600px) { .coastal-grid { grid-template-columns: 1fr; } }
+@media(prefers-reduced-motion:reduce) { .coastal-photo img { transition: none; } }
