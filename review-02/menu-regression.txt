@@ -1,0 +1,11 @@
+Before fix: both theme cases failed because expanded links extended below their category.
+
+
+Running 2 tests using 1 worker
+
+(node:64991) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 apps/web/e2e/design/homepage-navigation.spec.ts:5:3 › mobile homepage accordion keeps categories below expanded links light @design (912ms)
+  ✓  2 apps/web/e2e/design/homepage-navigation.spec.ts:5:3 › mobile homepage accordion keeps categories below expanded links dark @design (814ms)
+
+  2 passed (2.3s)

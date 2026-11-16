@@ -1,0 +1,9 @@
+
+ RUN  v5.0.5 /Users/fctedeveloper/.codex/worktrees/716-homepage-revision02/visitfrasercoast-com/packages/utils
+
+
+ Test Files  3 passed (3)
+      Tests  8 passed (8)
+   Start at  17:56:19
+   Duration  1.76s (tests 94%, setup 5%, transform 1%)
+

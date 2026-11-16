@@ -1,0 +1,47 @@
+[
+  {
+    "file": "assets/hero.jpg",
+    "source": "https://www.visitfrasercoast.com/wp-content/uploads/2023/09/Great_Sandy_Straits_Whale_Watching-2652x0-c-default.jpg",
+    "usage": "Local design review only; sourced from official tourism website."
+  },
+  {
+    "file": "assets/kgari.jpg",
+    "source": "https://www.visitfrasercoast.com/wp-content/uploads/2025/02/Lake-McKenzie-scaled-862x1264-c-default.jpg",
+    "usage": "Local design review only; sourced from official tourism website."
+  },
+  {
+    "file": "assets/beach.jpg",
+    "source": "https://www.visitfrasercoast.com/wp-content/uploads/2026/09/fraser-beach-14-862x1264-c-default.jpg",
+    "usage": "Local design review only; sourced from official tourism website."
+  },
+  {
+    "file": "assets/hervey.jpg",
+    "source": "https://www.visitfrasercoast.com/wp-content/uploads/2026/07/FCTE_HB-1023GMP-loc-16-scaled-862x1264-c-default.jpg",
+    "usage": "Local design review only; sourced from official tourism website."
+  },
+  {
+    "file": "assets/heritage.jpg",
+    "source": "https://www.visitfrasercoast.com/wp-content/uploads/2023/01/142136-2020_FC_Maryborough_Monument_QueensPark_ReubenNutt_1-6-scaled-862x1264-c-default.jpg",
+    "usage": "Local design review only; sourced from official tourism website."
+  },
+  {
+    "file": "assets/stay.jpg",
+    "source": "https://www.visitfrasercoast.com/wp-content/uploads/2024/04/Kingfisher-Bay-Resort_Kgari_Formerly-Fraser-Island-1-862x1264-c-default.jpg",
+    "usage": "Local design review only; sourced from official tourism website."
+  },
+  {
+    "file": "assets/whale.jpg",
+    "source": "https://www.visitfrasercoast.com/wp-content/uploads/2026/05/158211-2025_FC_HerveyBay_TasmanVenture_Whales_ReubenNutt_001-6-862x1264-c-default.jpg",
+    "usage": "Local design review only; sourced from official tourism website."
+  },
+  {
+    "file": "assets/island.jpg",
+    "source": "https://www.visitfrasercoast.com/wp-content/uploads/2026/08/ISLAND-IMAGE-FILM-SHOOT-July-2022-V1-1-862x1264-c-default.jpg",
+    "usage": "Local design review only; sourced from official tourism website."
+  },
+  {
+    "file": "assets/current-site-logo.svg",
+    "source": "https://www.visitfrasercoast.com/",
+    "usage": "Existing public-site logo, unchanged. Replace with approved new identity master before implementation."
+  }
+]

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Homepage revision 02 — review</title
+  ><style>
+    body {
+      max-width: 1050px;
+      margin: auto;
+      padding: 32px;
+      font: 17px/1.6 system-ui;
+      color: #1c426b;
+      background: #fbf9f6;
+    }
+    a {
+      color: #316b9d;
+    }
+    nav {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      padding: 12px 18px;
+      border: 1px solid;
+      border-radius: 8px;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+    .pair {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+    }
+    @media (max-width: 700px) {
+      .pair {
+        grid-template-columns: 1fr;
+      }
+    }
+    h1,
+    h2 {
+      line-height: 1.15;
+    }
+  </style>
+  <h1>Homepage revision 02</h1>
+  <p>
+    Prepared for Levi’s review. <strong>Not yet approved by Christian.</strong> This is the first
+    concept with Christian’s calendar and map feedback; it does not include the later revision 04
+    additions.
+  </p>
+  <nav>
+    <a href="mockups.html?home-width=1280&home-theme=light">Desktop · light</a
+    ><a href="mockups.html?home-width=1280&home-theme=dark">Desktop · dark</a
+    ><a href="mockups.html?home-width=393&home-theme=light">Mobile · light</a
+    ><a href="mockups.html?home-width=393&home-theme=dark">Mobile · dark</a>
+  </nav>
+  <h2>Changes</h2>
+  <ul>
+    <li>All twelve months visible together; no month dropdown or reveal needed.</li>
+    <li>
+      Explore Hervey Bay, K’gari and Maryborough directly on the homepage. Select pins, zoom, drag,
+      use arrow keys and reset. The dedicated map link remains.
+    </li>
+    <li>
+      Original six navigation groups retained. Montserrat, coastal colours and gradients retained;
+      body text brought to the approved 18px desktop / 16px mobile size.
+    </li>
+    <li>
+      The complete homepage is now in the shared mockups.html, with four width/theme drawings.
+      Destination and accommodation examples retain their baseline.
+    </li>
+  </ul>
+  <h2>Review one step at a time</h2>
+  <ol>
+    <li>Calendar: can you compare seasons without opening anything, on desktop and mobile?</li>
+    <li>Map: select Maryborough, zoom, pan and reset. Is the homepage detail sufficient?</li>
+    <li>
+      Open each navigation menu, then compare light and dark. Review overall hierarchy and wording.
+    </li>
+    <li>
+      Approve this review package for posting, or list changes. Christian must then explicitly
+      confirm the visual target before implementation.
+    </li>
+  </ol>
+  <h2>Desktop and mobile</h2>
+  <div class="pair">
+    <a href="screenshots/home-1280-light.png"
+      ><img
+        src="screenshots/hero-1280-light.png"
+        alt="Desktop hero; open complete desktop screenshot" /></a
+    ><a href="screenshots/home-393-light.png"
+      ><img src="screenshots/hero-393-light.png" alt="Mobile hero; open complete mobile screenshot"
+    /></a>
+  </div>
+  <h2>Calendar</h2>
+  <div class="pair">
+    <img src="screenshots/calendar-1280-light.png" alt="Desktop all-year calendar" /><img
+      src="screenshots/calendar-393-light.png"
+      alt="Mobile all-year calendar"
+    />
+  </div>
+  <h2>Map</h2>
+  <div class="pair">
+    <img src="screenshots/map-1280-light.png" alt="Desktop interactive map" /><img
+      src="screenshots/map-393-dark.png"
+      alt="Mobile dark map"
+    />
+  </div>
+  <h2>What is a mockup</h2>
+  <p>
+    The map is an offline Natural Earth coastline demonstration, not a production Mapbox
+    integration. Its three featured locations illustrate the homepage subset. No live CMS, bookings
+    or AI services are connected. Planner and local-guide dialogs are local demonstrations.
+    Navigation opens the development site and may require access. Seasonal data is preserved from
+    the captured homepage and still needs editorial freshness confirmation. Photographs and the
+    existing logo are interim review assets; final artwork and reuse permissions remain
+    implementation inputs.
+  </p>
+  <p>
+    Campaign prose is proposed editorial content. Interface strings are annotated in the shared
+    catalogue. No other page template or application theme was changed.
+  </p>
+  <h2>Mobile menu correction</h2>
+  <p>
+    Manual review found destination links overlapping later categories. A desktop-only height cap
+    was incorrectly applied to mobile. The cap now applies only above 900px, so each mobile category
+    expands fully inside the scrolling menu. Two regression tests failed before the fix and passed
+    afterwards, checking all six categories in both themes and menu closure.
+  </p>
+  <p>
+    <a href="screenshots/menu-393-dark.png">Corrected mobile menu screenshot</a> ·
+    <a href="menu-regression.txt">Regression test results</a>
+  </p>
+  <h2>Verification</h2>
+  <p>
+    Eight reference unit tests passed. Shared geometry and injected spacing/type drift checks passed
+    for all twelve drawings. Browser checks passed in four homepage states: six menus, twelve
+    months, map pins/zoom/keyboard pan/reset, dialogs, loaded images and no horizontal overflow or
+    JavaScript errors. Automated WCAG 2.1 A/AA scans found no violations in these four states; this
+    is not accessibility certification. Full application E2E, CMS integration, remote CI and PR
+    checks have not been run for this local review package.
+  </p>
+  <p>
+    <a href="verification.json">Browser results</a> ·
+    <a href="accessibility.jsonl">Accessibility results</a> ·
+    <a href="imagery-sources.json">Image sources</a>
+  </p>
+  <h2>Implementation handoff — pending approval</h2>
+  <p>
+    Compare the final drawing with the existing Payload homepage blocks during #717 planning.
+    Resolve seasonal content, map data/provider, approved assets and proposed copy there. No #717
+    workflow has started. #714 stays open until the children and final joint review are complete.
+  </p>
+  <p>
+    Coordination reminder: agree a Friday afternoon call time with Christian and Michelle, confirm
+    attendees and decision ownership while Michelle is away. No invitation has been sent.
+  </p>
+</html>

@@ -1,0 +1,45 @@
+{
+  "results": [
+    {
+      "width": 1280,
+      "theme": "light",
+      "images": "loaded",
+      "overflow": false,
+      "menus": 6,
+      "calendar": "all 12 months",
+      "map": "pins, zoom, keyboard pan and reset",
+      "dialogs": "open and close"
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "images": "loaded",
+      "overflow": false,
+      "menus": 6,
+      "calendar": "all 12 months",
+      "map": "pins, zoom, keyboard pan and reset",
+      "dialogs": "open and close"
+    },
+    {
+      "width": 393,
+      "theme": "light",
+      "images": "loaded",
+      "overflow": false,
+      "menus": 6,
+      "calendar": "all 12 months",
+      "map": "pins, zoom, keyboard pan and reset",
+      "dialogs": "open and close"
+    },
+    {
+      "width": 393,
+      "theme": "dark",
+      "images": "loaded",
+      "overflow": false,
+      "menus": 6,
+      "calendar": "all 12 months",
+      "map": "pins, zoom, keyboard pan and reset",
+      "dialogs": "open and close"
+    }
+  ],
+  "errors": []
+}
